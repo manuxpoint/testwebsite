@@ -434,19 +434,37 @@
                                         <circle cx="16" cy="22" r="3" fill="#2ea6ff"/>
                                     </g>
 
-                                    <!-- Laptop (Top Right) -->
+                                    <!-- Laptop (Top Right) - Hacker/Spoofer -->
                                     <g transform="translate(305, 40)">
                                         <!-- Screen -->
-                                        <rect x="0" y="0" width="55" height="35" rx="3" fill="rgba(139, 92, 246, 0.1)" stroke="rgba(139, 92, 246, 0.5)" stroke-width="1.5"/>
-                                        <rect x="4" y="4" width="47" height="27" rx="1" fill="rgba(139, 92, 246, 0.2)"/>
+                                        <rect x="0" y="0" width="55" height="35" rx="3" fill="rgba(239, 68, 68, 0.1)" stroke="rgba(239, 68, 68, 0.5)" stroke-width="1.5"/>
+                                        <rect x="4" y="4" width="47" height="27" rx="1" fill="rgba(239, 68, 68, 0.2)"/>
                                         <!-- Base -->
-                                        <path d="M-5,35 L60,35 L55,42 L0,42 Z" fill="rgba(139, 92, 246, 0.15)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1"/>
-                                        <!-- Signal indicator -->
-                                        <circle cx="27" cy="18" r="5" fill="#8b5cf6" opacity="0.4">
-                                            <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
-                                            <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                                        <path d="M-5,35 L60,35 L55,42 L0,42 Z" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1"/>
+                                        <!-- Skull/Hacker icon on screen -->
+                                        <g transform="translate(20, 10)">
+                                            <circle cx="7" cy="5" r="6" fill="none" stroke="#ef4444" stroke-width="1.2"/>
+                                            <circle cx="5" cy="4" r="1.2" fill="#ef4444"/>
+                                            <circle cx="9" cy="4" r="1.2" fill="#ef4444"/>
+                                            <path d="M4 7 L10 7" stroke="#ef4444" stroke-width="1" stroke-linecap="round"/>
+                                        </g>
+                                        <!-- Warning pulse -->
+                                        <circle cx="27" cy="18" r="5" fill="#ef4444" opacity="0.4">
+                                            <animate attributeName="r" values="4;10;4" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+                                            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
                                         </circle>
-                                        <circle cx="27" cy="18" r="3" fill="#8b5cf6"/>
+                                        <circle cx="27" cy="18" r="3" fill="#ef4444"/>
+                                        <!-- Spoofing Detected label -->
+                                        <g transform="translate(-15, -25)">
+                                            <rect x="0" y="0" width="85" height="18" rx="4" fill="rgba(239, 68, 68, 0.9)"/>
+                                            <text x="42" y="12" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold" font-family="Inter">Spoofing Detected</text>
+                                        </g>
+                                        <!-- Warning icon next to laptop -->
+                                        <g transform="translate(58, 5)">
+                                            <circle cx="8" cy="8" r="8" fill="rgba(239, 68, 68, 0.2)"/>
+                                            <path d="M8 4 L8 9" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                                            <circle cx="8" cy="12" r="1" fill="#ef4444"/>
+                                        </g>
                                     </g>
 
                                     <!-- Phone 2 (Bottom Left) -->
@@ -484,9 +502,9 @@
                                         </animateMotion>
                                     </circle>
 
-                                    <!-- Laptop to Xpoint -->
-                                    <path id="path2to" d="M310 65 Q270 90 242 120" fill="none" stroke="rgba(139, 92, 246, 0.3)" stroke-width="2"/>
-                                    <circle r="4" fill="#8b5cf6" filter="url(#glow)">
+                                    <!-- Laptop (Spoofer) to Xpoint -->
+                                    <path id="path2to" d="M310 65 Q270 90 242 120" fill="none" stroke="rgba(239, 68, 68, 0.3)" stroke-width="2"/>
+                                    <circle r="4" fill="#ef4444" filter="url(#glow)">
                                         <animateMotion dur="1.5s" repeatCount="indefinite" begin="0.4s">
                                             <mpath href="#path2to"/>
                                         </animateMotion>
@@ -517,13 +535,20 @@
                                         </animateMotion>
                                     </circle>
 
-                                    <!-- Xpoint to Laptop -->
-                                    <path id="path2back" d="M235 125 Q265 100 305 72" fill="none" stroke="rgba(34, 197, 94, 0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
-                                    <circle r="3" fill="#22c55e" filter="url(#glow)">
+                                    <!-- Xpoint to Laptop (BLOCKED - Red) -->
+                                    <path id="path2back" d="M235 125 Q265 100 305 72" fill="none" stroke="rgba(239, 68, 68, 0.4)" stroke-width="2" stroke-dasharray="4 3"/>
+                                    <circle r="4" fill="#ef4444" filter="url(#glow)">
                                         <animateMotion dur="1.5s" repeatCount="indefinite" begin="1.15s">
                                             <mpath href="#path2back"/>
                                         </animateMotion>
                                     </circle>
+                                    <!-- X mark that appears at end of path -->
+                                    <g transform="translate(330, 55)">
+                                        <circle cx="0" cy="0" r="8" fill="rgba(239, 68, 68, 0.3)">
+                                            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <path d="M-4 -4 L4 4 M4 -4 L-4 4" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                                    </g>
 
                                     <!-- Xpoint to Phone 2 -->
                                     <path id="path3back" d="M165 155 Q130 175 85 202" fill="none" stroke="rgba(34, 197, 94, 0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
@@ -542,11 +567,13 @@
                                     </circle>
 
                                     <!-- Legend -->
-                                    <g transform="translate(155, 268)">
+                                    <g transform="translate(95, 268)">
                                         <circle cx="0" cy="0" r="4" fill="#2ea6ff"/>
                                         <text x="10" y="4" fill="#6b7280" font-size="9" font-family="Inter">Location Data</text>
-                                        <circle cx="100" cy="0" r="4" fill="#22c55e"/>
-                                        <text x="110" y="4" fill="#6b7280" font-size="9" font-family="Inter">Response</text>
+                                        <circle cx="95" cy="0" r="4" fill="#22c55e"/>
+                                        <text x="105" y="4" fill="#6b7280" font-size="9" font-family="Inter">Approved</text>
+                                        <circle cx="175" cy="0" r="4" fill="#ef4444"/>
+                                        <text x="185" y="4" fill="#6b7280" font-size="9" font-family="Inter">Blocked</text>
                                     </g>
                                 </svg>
                             </div>
