@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Xpoint - Book a Demo</title>
+    <meta name="description" content="Get in touch with Xpoint. Book a demo, ask a question, or learn how our geolocation compliance platform can help your gaming business.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'xpoint': {
+                            50: '#eef9ff',
+                            100: '#d9f1ff',
+                            200: '#bce8ff',
+                            300: '#8ddaff',
+                            400: '#56c4ff',
+                            500: '#2ea6ff',
+                            600: '#1a8bf5',
+                            700: '#1270e1',
+                            800: '#165bb6',
+                            900: '#184d8f',
+                            950: '#0f1729',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #2ea6ff 0%, #8ddaff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-xpoint-950 text-white font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 nav-blur bg-xpoint-950/80 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-xpoint-400 to-xpoint-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold">Xpoint</span>
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html#solutions" class="px-4 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-white/5">Solutions</a>
+                    <a href="index.html#products" class="px-4 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-white/5">Products</a>
+                    <a href="index.html#industries" class="px-4 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-white/5">Industries</a>
+                    <a href="about.html" class="px-4 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-white/5">Company</a>
+                    <a href="news.html" class="px-4 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-white/5">News</a>
+                    <a href="careers.html" class="px-4 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-white/5">Careers</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="contact.html" class="text-white font-medium">Contact</a>
+                    <a href="#book-demo" class="bg-xpoint-500 hover:bg-xpoint-600 text-white px-6 py-2.5 rounded-full font-medium transition">
+                        Book a Demo
+                    </a>
+                </div>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-xpoint-950/95 border-t border-white/5">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html#solutions" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Solutions</a>
+                <a href="index.html#products" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Products</a>
+                <a href="index.html#industries" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Industries</a>
+                <a href="about.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Company</a>
+                <a href="news.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">News</a>
+                <a href="careers.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Careers</a>
+                <div class="pt-4 border-t border-white/10">
+                    <a href="#book-demo" class="block w-full text-center bg-xpoint-500 hover:bg-xpoint-600 text-white px-6 py-3 rounded-full font-medium">Book a Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <p class="text-xpoint-400 font-medium mb-4 uppercase text-sm tracking-wide">Contact Us</p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Let's talk.
+                </h1>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    Whether you're ready for a demo or just have questions, we'd love to hear from you.
+                    Our team typically responds within a few hours.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-xpoint-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-xpoint-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Email Us</h3>
+                    <p class="text-gray-500 text-sm mb-3">For general inquiries and support</p>
+                    <a href="mailto:hello@xpoint.com" class="text-xpoint-400 hover:text-xpoint-300 transition">hello@xpoint.com</a>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Call Us</h3>
+                    <p class="text-gray-500 text-sm mb-3">Mon-Fri 9am-6pm ET</p>
+                    <a href="tel:+1-555-123-4567" class="text-xpoint-400 hover:text-xpoint-300 transition">+1 (555) 123-4567</a>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Office</h3>
+                    <p class="text-gray-500 text-sm mb-3">Our headquarters</p>
+                    <p class="text-gray-400 text-sm">123 Tech Boulevard<br>San Francisco, CA 94105</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book a Demo Section -->
+    <section id="book-demo" class="py-20 bg-gradient-to-b from-xpoint-950 to-xpoint-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <p class="text-xpoint-400 font-medium mb-4 uppercase text-sm tracking-wide">Book a Demo</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        See Xpoint in action
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Schedule a personalized demo with our team. We'll walk you through our platform,
+                        answer your questions, and discuss how Xpoint can help your business.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-xpoint-500/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-xpoint-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">30-minute personalized demo</h3>
+                                <p class="text-gray-500 text-sm">See our platform tailored to your specific use case</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-xpoint-500/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-xpoint-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Pricing discussion</h3>
+                                <p class="text-gray-500 text-sm">Get a custom quote based on your needs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-xpoint-500/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-xpoint-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Integration guidance</h3>
+                                <p class="text-gray-500 text-sm">Learn how quickly you can get started</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Demo Request Form -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-6">Request a Demo</h3>
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">First Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Last Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="Smith">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Work Email *</label>
+                                <input type="email" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="john@company.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Company *</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="Company Inc.">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Industry *</label>
+                                <select required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-xpoint-500 transition">
+                                    <option value="" class="bg-xpoint-950">Select your industry</option>
+                                    <option value="sportsbook" class="bg-xpoint-950">Sportsbook</option>
+                                    <option value="online-casino" class="bg-xpoint-950">Online Casino / iGaming</option>
+                                    <option value="sweepstakes" class="bg-xpoint-950">Sweepstakes Casino</option>
+                                    <option value="lottery" class="bg-xpoint-950">iLottery</option>
+                                    <option value="dfs" class="bg-xpoint-950">Daily Fantasy Sports</option>
+                                    <option value="prediction-markets" class="bg-xpoint-950">Prediction Markets</option>
+                                    <option value="other" class="bg-xpoint-950">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Monthly Active Users</label>
+                                <select class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-xpoint-500 transition">
+                                    <option value="" class="bg-xpoint-950">Select range</option>
+                                    <option value="0-10k" class="bg-xpoint-950">0 - 10,000</option>
+                                    <option value="10k-100k" class="bg-xpoint-950">10,000 - 100,000</option>
+                                    <option value="100k-500k" class="bg-xpoint-950">100,000 - 500,000</option>
+                                    <option value="500k-1m" class="bg-xpoint-950">500,000 - 1,000,000</option>
+                                    <option value="1m+" class="bg-xpoint-950">1,000,000+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Tell us about your needs</label>
+                                <textarea rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition resize-none" placeholder="What challenges are you looking to solve?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-xpoint-500 hover:bg-xpoint-600 text-white px-8 py-4 rounded-xl font-semibold transition">
+                                Request Demo
+                            </button>
+                            <p class="text-gray-500 text-xs text-center">
+                                By submitting this form, you agree to our <a href="#" class="text-xpoint-400 hover:text-xpoint-300">Privacy Policy</a>.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Contact Form -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Send us a message</h2>
+                    <p class="text-gray-400">Have a general question? We'd love to hear from you.</p>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Subject *</label>
+                        <input type="text" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition" placeholder="How can we help?">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Message *</label>
+                        <textarea rows="5" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-xpoint-500 transition resize-none" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition border border-white/10">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-400">Quick answers to common questions</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 class="font-bold mb-2">How quickly can I integrate Xpoint?</h3>
+                    <p class="text-gray-400 text-sm">
+                        Most operators integrate Xpoint within a single sprint. Our developer-friendly SDKs
+                        and comprehensive documentation make the process straightforward.
+                    </p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 class="font-bold mb-2">What platforms do you support?</h3>
+                    <p class="text-gray-400 text-sm">
+                        We support iOS, Android, Web browsers, and Desktop applications. Our cross-platform
+                        SDKs ensure consistent behavior across all your products.
+                    </p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 class="font-bold mb-2">How does pricing work?</h3>
+                    <p class="text-gray-400 text-sm">
+                        We price based on monthly active users, not per-location check. This makes costs
+                        predictable and allows you to check player location as often as needed.
+                    </p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 class="font-bold mb-2">Which states do you support?</h3>
+                    <p class="text-gray-400 text-sm">
+                        We support all 38+ states where sports betting is legal, plus Washington D.C.
+                        Our coverage automatically expands as new states come online.
+                    </p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h3 class="font-bold mb-2">Do you offer a sandbox environment?</h3>
+                    <p class="text-gray-400 text-sm">
+                        Yes! We provide a full sandbox environment for testing your integration before
+                        going live. You can simulate various scenarios including edge cases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-xpoint-400 to-xpoint-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold">Xpoint</span>
+                    </div>
+                    <p class="text-gray-500 mb-6 max-w-sm">
+                        Compliance-grade geolocation for the modern gaming industry.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#solutions" class="text-gray-500 hover:text-white transition">Compliance</a></li>
+                        <li><a href="index.html#solutions" class="text-gray-500 hover:text-white transition">Fraud Detection</a></li>
+                        <li><a href="index.html#solutions" class="text-gray-500 hover:text-white transition">Chargeback Defense</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Industries</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-white transition">Sportsbooks</a></li>
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-white transition">Online Casinos</a></li>
+                        <li><a href="index.html#industries" class="text-gray-500 hover:text-white transition">Sweepstakes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-white transition">About Us</a></li>
+                        <li><a href="news.html" class="text-gray-500 hover:text-white transition">News</a></li>
+                        <li><a href="careers.html" class="text-gray-500 hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-500 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2025 Xpoint. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
